@@ -6,7 +6,8 @@
   <title>Instituto Colorir | Neurodesenvolvimento Infantil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Borel&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
   <style>
     :root {
       --bg: #f6fbff;
@@ -38,13 +39,23 @@
     }
 
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Borel', 'Nunito', sans-serif;
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(183, 230, 106, 0.22), transparent 28%),
         radial-gradient(circle at top right, rgba(103, 184, 247, 0.2), transparent 30%),
         linear-gradient(180deg, #f8fcff 0%, #eef8ff 100%);
       line-height: 1.6;
+    }
+
+    .nunito {
+      font-family: "Nunito", sans-serif;
+      font-weight: 500;
+    }
+
+    .nunito_b{
+      font-family: "Nunito", sans-serif;
+      font-weight: 800;
     }
 
     img {
@@ -364,6 +375,7 @@
       color: white;
       font-size: 20px;
       flex-shrink: 0;
+      
     }
 
     .mini-card strong {
@@ -400,6 +412,15 @@
       box-shadow: var(--shadow);
       padding: 28px;
     }
+
+    .card_reduced {
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(215, 230, 239, 0.95);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  height: fit-content;
+}
 
     .about-list {
       list-style: none;
@@ -541,6 +562,7 @@
       flex-direction: column;
       justify-content: space-between;
       isolation: isolate;
+      margin-top: 15%;
     }
 
     .post-card::before,
@@ -602,6 +624,7 @@
       font-size: clamp(24px, 2vw, 30px);
       line-height: 1;
       max-width: 220px;
+      margin-top: 8%;
     }
 
     .post-card p {
@@ -609,6 +632,7 @@
       max-width: 220px;
       color: rgba(28, 43, 56, 0.78);
       font-weight: 700;
+      margin-top: 8%;
     }
 
     .post-emoji {
@@ -618,11 +642,16 @@
       background: rgba(255, 255, 255, 0.35);
       display: grid;
       place-items: center;
+      padding-top: 8%;
       font-size: 38px;
       align-self: end;
       justify-self: end;
       border: 1px solid rgba(255, 255, 255, 0.45);
       backdrop-filter: blur(6px);
+    }
+
+    .padding_post{
+      padding-top: 10%;
     }
 
     .cta {
@@ -657,17 +686,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
     }
 
     .cta-ball {
-      width: 220px;
-      height: 220px;
+      width: 180px;
+      height: 180px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.22);
       border: 1px solid rgba(255, 255, 255, 0.4);
       display: grid;
       place-items: center;
       font-size: 72px;
+      padding-top: 8%;
     }
 
     .contact-grid {
@@ -819,7 +850,7 @@
         </div>
       </a>
 
-      <nav class="menu" id="menu">
+      <nav class="menu nunito" id="menu">
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#posts">Posts</a>
@@ -834,25 +865,25 @@
     <section class="hero" id="inicio">
       <div class="container hero__grid">
         <div>
-          <div class="tag">Clínica multidisciplinar do neurodesenvolvimento infantil</div>
-          <h1 class="hero__title">Desenvolvendo mentes singulares com <span>acolhimento</span>, ciência e cuidado.</h1>
+          <div class="tag nunito">Clínica multidisciplinar do neurodesenvolvimento infantil</div>
+          <h1 class="hero__title nunito">Desenvolvendo mentes singulares com <span>acolhimento</span>, ciência e cuidado.</h1>
 
           <div class="hero__actions">
-            <a class="button button--primary" href="#contato">Agendar avaliação</a>
-            <a class="button button--secondary" href="#posts">Ver conteúdos</a>
+            <a class="button button--primary nunito" href="#contato">Agendar avaliação</a>
+            <a class="button button--secondary nunito" href="#posts">Ver conteúdos</a>
           </div>
 
           <div class="hero__stats">
             <article class="stat-card">
-              <strong>+20</strong>
+              <strong class="nunito">+20</strong>
               <span>temas educativos para famílias</span>
             </article>
             <article class="stat-card">
-              <strong>Equipe</strong>
+              <strong class="nunito">Equipe</strong>
               <span>multidisciplinar e acolhedora</span>
             </article>
             <article class="stat-card">
-              <strong>Infância</strong>
+              <strong class="nunito">Infância</strong>
               <span>foco no desenvolvimento global</span>
             </article>
           </div>
@@ -866,14 +897,14 @@
 
             <div class="hero-card__mini">
               <div class="mini-card">
-                <div class="mini-icon">🧠</div>
+                <div class="mini-icon"><div style="padding-top: 25%;">🧠</div></div>
                 <div>
                   <strong>Neurodesenvolvimento</strong>
                   <span>Entendimento integral da criança e de suas fases.</span>
                 </div>
               </div>
               <div class="mini-card">
-                <div class="mini-icon">💬</div>
+                <div class="mini-icon"><div style="padding-top: 25%;">💬</div></div>
                 <div>
                   <strong>Orientação para famílias</strong>
                   <span>Conteúdo acessível sobre comportamento, fala e aprendizagem.</span>
@@ -887,16 +918,16 @@
 
     <section id="sobre">
       <div class="container">
-        <div class="tag">Sobre a clínica</div>
-        <h2 class="section-title">Uma clínica feita para acompanhar o desenvolvimento infantil de forma humana.</h2>
+        <div class="tag nunito">Sobre a clínica</div>
+        <h2 class="section-title nunito">Uma clínica feita para acompanhar o desenvolvimento infantil de forma humana.</h2>
         <p class="section-text">
-          O Instituto Colorir é apresentado aqui como uma clínica multidisciplinar do neurodesenvolvimento infantil, com atuação integrada para acolher crianças e orientar famílias em cada etapa do cuidado.
+          A clínica Instituto Colorir auxilia do neurodesenvolvimento infantil, com atuação integrada para acolher crianças e orientar famílias em cada etapa do cuidado.
         </p>
 
         <div class="about-grid" style="margin-top: 28px;">
           <article class="card">
             <h3 style="font-size: 26px; margin-bottom: 12px;">O que a clínica comunica</h3>
-            <p style="color: var(--muted);">
+            <p style="color: var(--muted);" class="nunito">
               O conteúdo da marca gira em torno de educação, conscientização e quebra de mitos sobre autismo, TDAH, atraso na fala, dislexia, hiperfoco, comportamento infantil, integração sensorial e rotina.
             </p>
 
@@ -934,34 +965,34 @@
 
     <section id="servicos">
       <div class="container">
-        <div class="tag">Atuação multidisciplinar</div>
-        <h2 class="section-title">Cuidado integrado para o neurodesenvolvimento infantil</h2>
+        <div class="tag nunito">Atuação multidisciplinar</div>
+        <h2 class="section-title nunito">Cuidado integrado para o neurodesenvolvimento infantil</h2>
         <p class="section-text">
-          O site apresenta a clínica como um espaço de acompanhamento com olhar ampliado, unindo especialidades e orientação familiar para promover mais qualidade de vida e desenvolvimento.
+          Um espaço de acompanhamento com olhar ampliado, unindo especialidades e orientação familiar para promover mais qualidade de vida e desenvolvimento.
         </p>
 
         <div class="services-grid">
           <article class="service-card">
-            <div class="service-card__icon">🗣️</div>
-            <h3>Fonoaudiologia</h3>
+            <div class="service-card__icon"><div style="padding-top: 25%;">🗣️</div></div>
+            <h3 class="nunito">Fonoaudiologia</h3>
             <p>Suporte para linguagem, comunicação, fala, escuta e desenvolvimento oral infantil.</p>
           </article>
 
           <article class="service-card">
-            <div class="service-card__icon">🧩</div>
-            <h3>Terapia ocupacional</h3>
+            <div class="service-card__icon"><div style="padding-top: 25%;">🧩</div></div>
+            <h3 class="nunito">Terapia ocupacional</h3>
             <p>Atuação em integração sensorial, autonomia, regulação e participação nas rotinas.</p>
           </article>
 
           <article class="service-card">
-            <div class="service-card__icon">👩‍⚕️</div>
-            <h3>Psicologia infantil</h3>
+            <div class="service-card__icon"><div style="padding-top: 25%;">👩‍⚕️</div></div>
+            <h3 class="nunito">Psicologia infantil</h3>
             <p>Acolhimento emocional, orientação parental e estratégias para comportamento e rotina.</p>
           </article>
 
           <article class="service-card">
-            <div class="service-card__icon">📘</div>
-            <h3>Psicopedagogia</h3>
+            <div class="service-card__icon"><div style="padding-top: 25%;">📘</div></div>
+            <h3 class="nunito">Psicopedagogia</h3>
             <p>Observação das dificuldades de aprendizagem e apoio ao desenvolvimento escolar.</p>
           </article>
         </div>
@@ -972,10 +1003,10 @@
       <div class="container">
         <div class="posts-header">
           <div>
-            <div class="tag">Conteúdos</div>
-            <h2 class="section-title">Posts</h2>
+            <div class="tag nunito">Conteúdos</div>
+            <h2 class="section-title nunito">Posts</h2>
             <p class="section-text">
-              Os cards abaixo foram criados com o mesmo tipo de linguagem do perfil: temas curtos, visuais leves e conteúdo educativo para pais e responsáveis.
+              Acompanhe nossos posts e saiba mais sobre mitos e dúvidas
             </p>
           </div>
 
@@ -991,23 +1022,23 @@
         <div class="posts-grid" id="postsGrid">
           <article class="post-card post-card--blue" data-category="autismo">
             <div class="post-card__top">
-              <span class="post-badge">Autismo</span>
-              <span class="post-badge">Educação</span>
+              <span class="post-badge nunito">Autismo</span>
+              <span class="post-badge nunito">Educação</span>
             </div>
             <div>
-              <h3>Açúcar e autismo?</h3>
-              <p>Entenda por que esse tipo de associação precisa ser tratado com responsabilidade.</p>
+              <h3 class="nunito_b">Açúcar e autismo?</h3>
+              <p class="nunito">Entenda por que esse tipo de associação precisa ser tratado com responsabilidade.</p>
             </div>
             <div class="post-emoji">🍩</div>
           </article>
 
           <article class="post-card post-card--green" data-category="rotina">
             <div class="post-card__top">
-              <span class="post-badge">Rotina</span>
-              <span class="post-badge">Família</span>
+              <span class="post-badge nunito">Rotina</span>
+              <span class="post-badge nunito">Família</span>
             </div>
             <div>
-              <h3>Volta às aulas</h3>
+              <h3 class="nunito_b">Volta às aulas</h3>
               <p>Como preparar seu filho para a mudança de rotina com mais segurança.</p>
             </div>
             <div class="post-emoji">✏️</div>
@@ -1015,11 +1046,11 @@
 
           <article class="post-card post-card--mix" data-category="tdah">
             <div class="post-card__top">
-              <span class="post-badge">TDAH</span>
-              <span class="post-badge">Sinais</span>
+              <span class="post-badge nunito">TDAH</span>
+              <span class="post-badge nunito">Sinais</span>
             </div>
             <div>
-              <h3>Sinais de TDAH</h3>
+              <h3 class="nunito_b">Sinais de TDAH</h3>
               <p>O que merece atenção e quando procurar avaliação especializada.</p>
             </div>
             <div class="post-emoji">⚡</div>
@@ -1027,11 +1058,11 @@
 
           <article class="post-card post-card--green" data-category="fala">
             <div class="post-card__top">
-              <span class="post-badge">Fala</span>
-              <span class="post-badge">Linguagem</span>
+              <span class="post-badge nunito">Fala</span>
+              <span class="post-badge nunito">Linguagem</span>
             </div>
             <div>
-              <h3>Fono é só fala?</h3>
+              <h3 class="nunito_b">Fono é só fala?</h3>
               <p>A comunicação envolve muito mais do que pronunciar palavras.</p>
             </div>
             <div class="post-emoji">💬</div>
@@ -1039,11 +1070,11 @@
 
           <article class="post-card post-card--blue" data-category="autismo">
             <div class="post-card__top">
-              <span class="post-badge">Autismo</span>
-              <span class="post-badge">Mitos</span>
+              <span class="post-badge nunito">Autismo</span>
+              <span class="post-badge nunito">Mitos</span>
             </div>
             <div>
-              <h3>Autismo vem do pai?</h3>
+              <h3 class="nunito_b">Autismo vem do pai?</h3>
               <p>Uma pergunta comum que pede informação cuidadosa e sem simplificações.</p>
             </div>
             <div class="post-emoji">🧠</div>
@@ -1051,11 +1082,11 @@
 
           <article class="post-card post-card--mix" data-category="rotina">
             <div class="post-card__top">
-              <span class="post-badge">Família</span>
-              <span class="post-badge">Comportamento</span>
+              <span class="post-badge nunito">Família</span>
+              <span class="post-badge nunito">Comportamento</span>
             </div>
             <div>
-              <h3>Como estimular?</h3>
+              <h3 class="nunito_b">Como estimular?</h3>
               <p>Pequenas interações do dia a dia fazem diferença no desenvolvimento.</p>
             </div>
             <div class="post-emoji">🌟</div>
@@ -1063,11 +1094,11 @@
 
           <article class="post-card post-card--green" data-category="tdah">
             <div class="post-card__top">
-              <span class="post-badge">TDAH</span>
-              <span class="post-badge">Dúvidas</span>
+              <span class="post-badge nunito">TDAH</span>
+              <span class="post-badge nunito">Dúvidas</span>
             </div>
             <div>
-              <h3>TDA ou TDAH?</h3>
+              <h3 class="nunito_b">TDA ou TDAH?</h3>
               <p>Entenda a diferença entre os termos e por que isso gera tanta dúvida.</p>
             </div>
             <div class="post-emoji">❓</div>
@@ -1075,11 +1106,11 @@
 
           <article class="post-card post-card--blue" data-category="fala">
             <div class="post-card__top">
-              <span class="post-badge">Fala</span>
-              <span class="post-badge">Linguagem</span>
+              <span class="post-badge nunito">Fala</span>
+              <span class="post-badge nunito">Linguagem</span>
             </div>
             <div>
-              <h3>Parece travar para falar?</h3>
+              <h3 class="nunito_b">Parece travar para falar?</h3>
               <p>Nem sempre é apenas timidez. Observar o contexto é importante.</p>
             </div>
             <div class="post-emoji">🗨️</div>
@@ -1092,12 +1123,9 @@
       <div class="container">
         <div class="cta-card">
           <div>
-            <div class="tag" style="background: rgba(255,255,255,0.18); color: white;">Cuidado infantil com acolhimento</div>
-            <h2 class="section-title" style="margin-top: 18px; color: white;">Uma comunicação visual pensada para informar, acolher e aproximar famílias.</h2>
-            <p>
-              Este layout transforma o estilo do Instagram em uma página institucional moderna, com foco em apresentação da clínica, autoridade e conexão com o público.
-            </p>
-            <a href="#contato" class="button button--secondary">Falar com a clínica</a>
+            <div class="tag nunito" style="background: rgba(255,255,255,0.18); color: white;">Cuidado infantil com acolhimento</div>
+            <h2 class="section-title nunito" style="margin-top: 18px; color: white; margin-bottom: 8%;">Uma comunicação visual pensada para informar, acolher e aproximar famílias.</h2>
+            <a href="#contato" class="button button--secondary nunito">Falar com a clínica</a>
           </div>
           <div class="cta-visual">
             <div class="cta-ball">🌈</div>
@@ -1108,40 +1136,45 @@
 
     <section id="contato">
       <div class="container">
-        <div class="tag">Contato</div>
-        <h2 class="section-title">Agende uma conversa com a equipe</h2>
+        <div class="tag nunito">Contato</div>
+        <h2 class="section-title nunito">Agende uma conversa com a equipe</h2>
         <p class="section-text">
           Preencha o formulário para um serviço mais personalizado!
         </p>
 
         <div class="contact-grid">
-          <article class="card">
-            <h3 style="font-size: 26px; margin-bottom: 10px;">Informações da clínica</h3>
-            <p style="color: var(--muted);">
-              Você pode adaptar estes dados com os contatos reais da clínica, endereço completo, WhatsApp, horário de atendimento e link do Instagram.
-            </p>
+          <article class="card_reduced">
+  <h3 class="nunito_b" style="font-size: 26px; margin-bottom: 10px;">
+    Informações da clínica
+  </h3>
 
-            <ul class="contact-list">
-              <li><strong>Telefone:</strong> (00) 0000-0000</li>
-              <li><strong>WhatsApp:</strong> (00) 00000-0000</li>
-              <li><strong>Endereço:</strong> Rua Exemplo, 123 - Centro</li>
-              <li><strong>Instagram:</strong> @institutocolorirpe</li>
-              <li><strong>Horário:</strong> Segunda a sexta, das 08h às 18h</li>
-            </ul>
-          </article>
+  <ul class="contact-list">
+    <li><strong class="nunito_b">Telefone:</strong> (00) 0000-0000</li>
+    <li><strong class="nunito_b">WhatsApp:</strong> (00) 00000-0000</li>
+    <li><strong class="nunito_b">Endereço:</strong> Rua Exemplo, 123 - Centro</li>
+    <li><strong class="nunito_b">Horário:</strong> Segunda a sexta, das 08h às 18h</li>
+  </ul>
+
+  <a href="https://www.instagram.com/institutocolorirpe/"
+     target="_blank"
+     style="font-size: 48px; display: inline-block; margin-top: 30px;">
+     
+    <i class="lab la-instagram"></i>
+  </a>
+</article>
 
           <article class="card">
-            <h3 style="font-size: 26px; margin-bottom: 14px;">Solicitar atendimento</h3>
+            <h3 style="font-size: 26px; margin-bottom: 14px;" class="nunito_b">Solicitar atendimento</h3>
             <form id="contactForm">
-              <div class="field">
+              <div class="field nunito_b">
                 <label for="name">Nome</label>
                 <input type="text" id="name" placeholder="Seu nome" required />
               </div>
-              <div class="field">
+              <div class="field nunito_b">
                 <label for="email">E-mail</label>
                 <input type="email" id="email" placeholder="seuemail@email.com" required />
               </div>
-              <div class="field">
+              <div class="field nunito_b">
                 <label for="message">Mensagem</label>
                 <textarea id="message" rows="5" placeholder="Conte brevemente o que você procura" required></textarea>
               </div>
@@ -1157,7 +1190,7 @@
   <footer class="footer">
     <div class="container footer__content">
       <p>© 2026 Instituto Colorir - Clínica multidisciplinar do neurodesenvolvimento infantil.</p>
-      <p>Desenvolvido por <a href="https://www.heinsoft.com.br/" style="color: #000;">HeinSoft Company</a></p>
+      <p class="nunito_b">Desenvolvido por <a href="https://www.heinsoft.com.br/" style="color: #000;">HeinSoft Company</a></p>
     </div>
   </footer>
 

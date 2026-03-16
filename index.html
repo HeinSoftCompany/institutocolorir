@@ -436,8 +436,7 @@
       color: var(--muted);
     }
 
-    .about-list li::before {
-      content: "✓";
+    .about_li {
       width: 28px;
       height: 28px;
       border-radius: 50%;
@@ -447,6 +446,7 @@
       place-items: center;
       font-weight: 800;
       flex-shrink: 0;
+      padding-top: 1%;
     }
 
     .areas {
@@ -932,9 +932,9 @@
             </p>
 
             <ul class="about-list">
-              <li>Explicações simples sobre temas complexos do desenvolvimento infantil.</li>
-              <li>Posts pensados para pais, responsáveis e cuidadores.</li>
-              <li>Linguagem acolhedora com identidade visual leve, lúdica e profissional.</li>
+              <li><div class="about_li">✓</div>Explicações simples sobre temas complexos do desenvolvimento infantil.</li>
+              <li><div class="about_li">✓</div>Posts pensados para pais, responsáveis e cuidadores.</li>
+              <li><div class="about_li">✓</div>Linguagem acolhedora com identidade visual leve, lúdica e profissional.</li>
             </ul>
           </article>
 
@@ -1144,9 +1144,9 @@
 
         <div class="contact-grid">
           <article class="card_reduced">
-  <h3 class="nunito_b" style="font-size: 26px; margin-bottom: 10px;">
-    Informações da clínica
-  </h3>
+          <h3 class="nunito_b" style="font-size: 26px; margin-bottom: 10px;">
+            Informações da clínica
+          </h3>
 
   <ul class="contact-list">
     <li><strong class="nunito_b">Telefone:</strong> (00) 0000-0000</li>
